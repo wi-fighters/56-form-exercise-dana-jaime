@@ -19,7 +19,7 @@
 
 fieldset {
     @include fieldset-border();
-    @include display();
+    @include flex-column();
     margin-bottom: 1.5rem;
 }
 
@@ -39,11 +39,11 @@ input, datalist {
 }
 
 label {
-    @include display();
+    @include flex-column();
     @include label();
 }
 
-fieldset>label:first-of-type {
+.wrap-labels:first-of-type {
     margin-top: 1rem;
 }
 
@@ -56,4 +56,24 @@ fieldset>label:first-of-type {
 
 .country {
     @include country();
+}
+
+@media screen and (min-width: 600px){
+
+    .wrap-labels {
+        @include flex-row();
+        label {
+            width: 49%;
+        }
+    }
+
+    .wrapper {
+        @include flex-column();
+        align-items: center;
+    }
+
+    .container {
+        width: 80%;
+    }
+        
 }
