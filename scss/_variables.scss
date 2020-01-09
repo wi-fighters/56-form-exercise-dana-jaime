@@ -1,0 +1,46 @@
+$text-color: #1f1408;
+
+$button-color: #000;
+
+$wrapper-background: rgb(247, 246, 255);
+
+$form-background: #fcf0e8;
+
+$placeholder-color: #74747a;
+
+$font-big: 2rem;
+
+$font-medium: 1.6rem;
+
+$font-small: 0.9rem;
+
+$h-padding: 1rem 2rem;
+
+$border-radius: 0.25rem;
+
+@mixin fieldset-border {
+    border: 1px dotted $text-color;
+    border-left: 1px solid $text-color;
+    border-radius: $border-radius;
+}
+
+@mixin display {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin field {
+    color: $text-color;
+    font-size: $font-small;
+}
+
+@mixin label {
+    margin-bottom: 0.5rem;    
+}
+
+@mixin input {
+    margin-top: 0.3rem;
+    border: none;
+    border-radius: $border-radius;
+    padding: 0.5rem;
+}

@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +7,48 @@
 }
 
 .wrapper {
-
+    background-color: $wrapper-background;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    padding: 0 2rem;
+    background-color: $form-background;
+}
+
+fieldset {
+    @include fieldset-border();
+    @include display();
+    margin-bottom: 1.5rem;
+}
+
+h1, .container {
+    margin: 0;
+    padding: $h-padding;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 1rem 0;
+}
+
+input, datalist {
+    @include field();
+    @include input();
+}
+
+label {
+    @include display();
+    @include label();
+}
+
+fieldset>label:first-of-type {
+    margin-top: 1rem;
+}
+
+#submit {
+    width: 100%;
+    margin: 0 auto 1rem;
+    background-color: white;
+    color: $button-color;
+}
